@@ -59,7 +59,6 @@ function get_veicle(){
             fetch(`https://api.currencyapi.com/v3/latest?apikey=rfjOpz1FrNmVTwZq7eQjWkrsOx91CDzziO6KhUnb&value=${parseInt(item.Valor.split(" ")[1])}&currencies=COP,USD&base_currency=BRL`)
             .then((response) =>response.json(),)
                 .then((tasa)=>{
-                    console.log(parseInt(item.Valor.split(" ")[1]))
                     tasa= tasa.data.COP.value
                     let txt =`
                         Marca : ${item.Marca} <br>
